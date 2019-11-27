@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Info</title>
+
+    <link rel="stylesheet" href="../css/info.css">
+    <script src="../js/person.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-container" name="addPersonForm">
+            <h2>I have information about someone</h2>
+            <hr>
+            <p>Enter details about the person</p>
+            <label for="user">
+                Last name:
+                <input id="user" name="lastname" type="text" placeholder="ex.Popescu" required>
+            </label>
+            <br>
+            <label for="user2">
+                First name:
+                <input id="user2" name="firstname" type="text" placeholder="ex. Ion" required>
+            </label>
+            <br>
+            <label for="situation">
+                Situation:
+                <select id="situation" name="situation" required>
+                    <option value="alive">Alive</option>
+                    <option value="notfound">Not found</option>
+                    <option value="dead">Dead</option>
+                </select>
+            </label>
+            <br>
+            <label for="details">
+                Description:
+                <input id="details" name="details" type="text" placeholder="ex.person is very injured">
+            </label>
+            <br>
+            <div class="btn" type="submit" onClick="addPerson()">
+                Give informations about some person
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

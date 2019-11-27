@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
+        <link rel="stylesheet" href="../css/loginregister.css">
+        <script src="../js/Index.js"></script>
+        
+</head>
+<body>
+    <header>
+        <div class="Meniu">
+    
+                <img src="../assets/logo_transparent.png" alt="Logo">
+                <button class="button" onclick="window.location.assign('../Index.html')">Home</button>
+                <button class="button" onclick="window.location.assign('./events.html')">Events List</button>
+                <button class="button" onclick="window.location.assign('./form.html')">Add Events</button>
+                <button class="button" onclick="window.location.assign('./Interfata.html')">Guide</button>  
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+                  <div class="login">
+                    <h2>Login</h2>
+                    <input class="InputText" type="text" id="Username" placeholder="Username">
+                    <input class="InputText" type="password" id="Password" placeholder="Password">
+
+                    <a href="./Interfata.html">Sign in</a>
+                    <p>Don't have an account?</p>
+                    <a href="./Interfata.html" id="RegisterButton">Register</a>
+                  </div>  
+                  
+          
+                </div>
+                <p></p>
+                <span onclick="openNav()" id="Account">Account &#9776; </span>
+          
+            </div>
+    </header>
+    <section>
+    <div class="container">
+    
+            <h2 id="loginText">Log in</h2>
+        <img src="../images/radarForm.png" alt=""  class="centerImage">
+        <div class="loginContent">
+            <input type="text" class="contentBox" placeholder= "Username" style="color:white">
+            <input type="password" class="contentBox" placeholder="Password" style="color:white">
+        </div>
+
+        <button class="submit" onclick="window.location.assign('../index.html')">SEND</button>
+        <p>Don`t have an account yet?</p><a href="./register.html" class="registerLink" >Register</a>
+    </div>
+
+</section>
+<footer>
+    <p >CONTACT:</p>
+    <div class="containerFooter">
+
+      <div class="firstContact">
+        <ul>
+          <li>Bogdan Mihăilă</li>
+          <li>Phone: 0745572086</li>
+          <li>Email: bogdan.mihaila@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="secondContact">
+        <ul>
+          <li >Tudor Mîndrișoru</li>
+          <li>Phone: 0742748699</li>
+          <li>Email: tudor.mindrisoru@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="thirdContact">
+        <ul>
+          <li>Andrei Raicu</li>
+          <li>Phone: 0724050100</li>
+          <li>Email: andrei.raicu@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="fourthContact">
+        <ul>
+          <li>Bianca Tizu</li>
+          <li>Phone: 0729682113 </li>
+          <li>Email: bianca.tizu@info.uaic.ro</li>
+        </ul>
+      </div>
+    </div>
+    <p>Copyright &copy; 2019</p>
+</footer>
+</body>
+</html>

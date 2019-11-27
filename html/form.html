@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Formular</title>
+        <link rel="stylesheet" href="../css/form.css">
+<!--         <script src="../js/Index.js"></script> -->
+        
+</head>
+<body>
+    <header>
+    </header>
+
+    <section>
+    <div class="container">
+    
+        <p >COMPLETE THE FORM:</p>
+        <img src="../images/radarForm.png" alt=""  class="centerImage">
+        <input type="text" class="contentBox" placeholder="Event name" style="color:white">
+       
+        <textarea name="Description" cols="30" rows="10" placeholder="Description" class="contentBox" style="color:white ;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></textarea>
+        <input type="text" class="contentBox" placeholder="Radius" style="color:white">
+        <label style="color:white">Choose date:</label>
+        <input type="datetime-local" class="contentBox" style="color: white">
+        <label style="color:white">Choose event severity:</label>
+        <select name="severity" class="contentBox" style="color:white" >
+            <option value="vhigh">Very High</option>
+            <option value="high" >High</option>
+            <option value="med" >Medium</option>
+            <option value="easy" >Easy</option>
+        </select>
+        <label style="color:white" >Choose event type:</label>
+        <select name="severity"  class="contentBox" style="color:white">
+            <option value="earthquake" >Earthquake</option>
+            <option value="floods" >Floods</option>
+            <option value="hurricane" >Hurricane</option>
+            <option value="another" >Another</option>
+        </select>
+        <button class="submit" onclick="window.location.assign('./form.html')">SEND</button>
+    </div>
+    </section>
+
+<footer>
+    <p >CONTACT:</p>
+    <div class="containerFooter">
+
+      <div class="firstContact">
+        <ul>
+          <li>Bogdan Mihăilă</li>
+          <li>Phone: 0745572086</li>
+          <li>Email: bogdan.mihaila@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="secondContact">
+        <ul>
+          <li >Tudor Mîndrișoru</li>
+          <li>Phone: 0742748699</li>
+          <li>Email: tudor.mindrisoru@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="thirdContact" style="margin-left: 0 !important">
+        <ul>
+          <li>Andrei Raicu</li>
+          <li>Phone: 0724050100</li>
+          <li>Email: andrei.raicu@info.uaic.ro</li>
+        </ul>
+      </div>
+
+      <div class="fourthContact" style="margin-left: 0 !important">
+        <ul>
+          <li>Bianca Tizu</li>
+          <li>Phone: 0729682113 </li>
+          <li>Email: bianca.tizu@info.uaic.ro</li>
+        </ul>
+      </div>
+    </div>
+    <p>Copyright &copy; 2019</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background: whitesmoke;
+}
+
+.form-container {
+    padding: 15px;
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+label {
+    color: red;
+}
+
+input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background: transparent;
+    font-size: 16px;
+}
+
+.btn,
+.btn-edit,
+.btn-delete {
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    font-size:14px;
+}
+
+.btn,
+.btn-edit {
+    background: #009DFF;
+}
+
+.btn-delete {
+    background: #d11a2a;
+}
+
+.footer {
+    text-align: left;
+    color: rgb(147, 147, 147);
+    font-weight: 100;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+    margin: 5px 0;
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card h4,
+.card h5 {
+    padding: 0 10px;
+    margin: 5px;
+    font-size: 17px;
+}
+
+#userContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 2% 35% 0 35%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    font-size:14px;
+}

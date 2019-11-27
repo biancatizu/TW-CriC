@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Search</title>
+
+        <link rel="stylesheet" href="../css/search.css">
+        <link rel="stylesheet" href="../css/info.css">
+        <script src="../js/search.js"></script>
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="form-container">
+                <h2>Look for somebody.</h2>
+                <hr>
+                <label for="user">
+                    Name is mandatory* :
+                    <br>
+                    <input id="user" name="user" type="text" placeholder="ex. Ion Popescu">
+                </label>
+                <br>
+                <div class="btn" id="btn" onClick="getPersons()">
+                    Look for this person
+                </div>
+            </div>
+            <div id="userContainer">
+
+            </div>
+
+
+        </div>
+
+    </body>
+
+</html>

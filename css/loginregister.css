@@ -1,0 +1,311 @@
+body{
+    width: 100%;
+    position: absolute;
+    color: #F1E0C5;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Meniu{
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 1fr;
+  background-image: linear-gradient(150deg, #000000 60%, rgb(148, 52, 52));
+  justify-items: stretch;
+}
+
+.Meniu button{
+  border: none;
+  width: auto;
+  align-self: center;
+  background-color: #000000;
+  color: #fff;
+  padding:4%;
+  margin:5%;
+  border-left: #eee solid 0.15em;
+  font-size: 15px;
+  position: relative;
+
+}
+
+.Meniu button:hover {
+  background-color: #fff;
+  color:#19191a;
+  transition: 0.5s;
+  border-left: rgb(148, 52, 52) solid 2em;
+  opacity: 0.8;
+  padding: 5%;
+}
+
+.Meniu a{
+  padding-left: 0;
+  margin: 1%;
+}
+
+.Meniu img{
+  width: 30%;
+  padding: 5%;
+  padding-left: 20%;
+  padding-right:0px;
+ }
+ .Meniu p {
+    margin: 10%;
+    padding: 5% 7%;
+ }
+
+ #Account{
+    display: none;
+    color: #eeeeee;
+    font-size: 25px;
+    margin-top: 5%;
+    cursor:pointer;
+    margin: 8%;
+    align-self: center;
+    padding-left: 40%;
+    width:auto;
+  }
+    
+ .sidenav{
+   display:none !important;
+   width: 0;
+   position: fixed !important;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   background-color: #19191a;
+   overflow-x: hidden !important;
+   transition: 0.3s;
+   padding-top: 3%;
+   margin-top: 6.1%;
+ }
+   
+ .sidenav a{
+   padding: 6% 5%;
+   text-decoration: none;
+   font-size: 25px;
+   color: #eeeeee;
+   display: block;
+   transition: 0.3s;
+ }
+ .sidenav a:hover{
+   color: #490A0A;
+   background: #eeeeee;
+   padding: 6%;
+
+ }
+ .sidenav .closebtn{
+
+    position: absolute;
+    top: 0;
+    left: 0%;
+    font-size: 10px;
+ }
+
+ .login {
+  padding-top: 1%;
+  width: 80%;
+  border: #eee solid 0.2em;
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  align-items: center;
+}
+.login h2{
+  font-weight: 500;
+  color: white;
+}
+.login a{
+  font-size: 15px;
+}
+
+#Username, #Password{
+  padding: 2%;
+  margin: 3%;
+}
+
+
+section{
+    border-top: #490A0A solid 1px;
+    margin-top: 1px;
+    padding-top: 50px;
+    padding-bottom:100px;
+    width: 100%;
+    background-image: linear-gradient(90deg, #000000 53%, rgb(148, 52, 52));
+    height: auto;
+    z-index: 7;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.999999;
+}
+section .container{
+    width: 50%;
+    height: auto;
+    opacity: 1;
+    padding-bottom:10px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    opacity: 1 !important;
+    align-items: center !important;
+    margin-left: 25%;
+    z-index: 999;
+}
+
+.loginContent{
+    width:60%;
+    padding-top:20px;
+  }
+
+.loginContent input{
+  width:100%;
+  align-self:center;
+  text-indent: 2%;
+}
+.contentBox{
+
+    width: 60%;
+    height: 50px;
+    border: 2px solid white;
+    text-indent: 1%;
+    margin:1%;
+    background-color: transparent;
+    resize: none;
+    border: 1px solid white;
+}
+
+
+.container .submit{
+  border: none;
+  width: auto;
+  align-self: center;
+  background-color: transparent;
+  color: #fff;
+  padding:2% 5%;
+  margin:3%;
+  border: 1px solid white;
+  font-size: 15px;
+  position: relative;
+}
+
+.container .submit:hover{
+  background-color: #fff;
+  color:rgb(148, 52, 52);
+  transition: 0.5s;
+  opacity: 0.8;
+  padding: 2% 6%;
+}
+.registerLink , .loginLink{
+  text-decoration: none;
+  color:rgb(148, 52, 52);
+  font-weight: 700; 
+}
+section .centerImage{
+    position: absolute;
+    opacity: 0.6;
+    z-index: -1;
+    margin-left:10%;
+    display: none !important;
+
+}
+
+::placeholder{
+  color:white;
+}
+
+footer{
+  width:100%;
+  height:auto;
+  background-color:#000000;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom:15px;
+  border-top: 1px solid white;
+}
+
+footer p{
+  text-align: center;
+}
+
+.containerFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.contact p{
+  margin: 0 auto;
+  position: absolute;
+}
+
+.firstContact, .secondContact , .thirdContact , .fourthContact{
+  margin:0 auto;
+  border-left: 1px solid #F1E0C5;
+}
+
+.firstContact{
+  border: none !important;
+}
+
+.firstContact li , .secondContact li , .thirdContact li , .fourthContact li {
+  list-style:none;
+}
+
+@media (max-width: 1242px) {
+  footer{
+  flex-wrap:wrap; 
+  }
+  .firstContact, .secondContact , .thirdContact , .fourthContact{
+    margin: 0 auto;
+    border: none;
+  }
+  .firstContact .secondContact{
+    flex-direction: column;
+  }
+  .thirdContact .fourthContact{
+    margin-left:0;
+  }
+}
+@media screen and (max-width: 1000px){
+  section .centerImage{
+    display:none;
+  }
+}
+@media screen and (max-width: 450px){
+  #Account{
+
+    font-size: 15px;
+    margin: 0px;
+    padding-left: 10%;
+  }
+  .Meniu {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .Meniu img{
+    padding-left:0%;
+  }
+  .containerFooter{
+    flex-direction: column;
+  }
+  .container{
+    font-size: 70%;
+  }
+  
+}
+
+
+@media screen and (max-height: 450px) {
+.sidenav {
+  padding-top: 15px;}
+.sidenav a {
+  font-size: 18px;}
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en-GB'>
+
+<head>
+    <title>CriC - Crisis Containment Service</title>
+    <link rel="shortcut icon" href="assets/favicon.png" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/map.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <!--main container-->
+        <div class="main-container">
+            <!--single row-->
+            <div class="single-row">
+                <div class="logo">
+                    <img src="assets/logo_transparent.png" alt='Cric Logo'/>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-entry" onClick="showMapPage()">Map</li>
+                        <li class="menu-entry" onClick="showEventsPage()">Events</li>
+                        <li class="menu-entry" onClick="showCasualtiesPage()">Casualties</li>
+                        <li class="menu-entry" onClick="showGuidePage()">Guide</li>
+                        <li class="add-entry" onClick="showFormPage()"><img src="assets/add_button_2.png" alt='Add Event'></li>
+                        </ul>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </header>
+    <!--content-->
+    <section>
+        <!--main container-->
+        <div class="main-container">
+            <!--single row-->
+            <div class="single-row">
+                    <iframe src="html/map.html"></iframe>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Crisis Containment Service - Scholarly HTML</title>
+    <link rel="stylesheet" href="./css/documentation.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+      <h1>Crisis Containment Service - Raport Scholarly</h1>
+
+      <div id="toc_container">
+        <ul class="toc_list">
+            <li><a href="#abstract">1. Abstract</a></li>
+            <li><a href="#introduction">2. Introducere</a></li>
+            <li><a href="#technologies">3. Tehnologii</a>
+              <ul>
+                  <li><a href="#tech_1">3.1 HTML CSS JavaScript </a></li>
+                  <li><a href="#tech_2">3.2 NodeJS </a></li>
+                  <li><a href="#tech_2">3.3 MongoDB </a></li>
+                  <li><a href="#tech_2">3.4 GitHub </a></li>
+                  <li><a href="#tech_2">3.5 Server </a></li>
+              </ul>
+          </li>
+            <li><a href="#arhitecture">4. Arhitectura proiectului</a>
+                <ul>
+                    <li><a href="#arhitecture_1">4.1 Diagramă</a></li>
+                        <li><a href="#arhitecture_2">4.2 Context </a></li>
+                        <li><a href="#arhitecture_3">4.3 Diagramă bază de date</a></li>
+                </ul>
+            </li>
+            <li><a href="#SurseExterne">5. Surse date externe</a>
+                <ul>
+                    <li><a href="#SurseExterne_1">5.1 Schimbarea datelor utilizatorului</a></li>
+                    <li><a href="#SurseExterne_2">5.2 Logare</a></li>
+                    <li><a href="#SurseExterne_3">5.3 Utilizarea de API-uri</a></li>
+                </ul>
+            </li>
+            <li><a href="#mvc">6. MVC Model</a>
+            </li>
+            <li><a href="#UseCases">7. Diagrame Use-Case</a></li>
+            <li><a href="#Tasks">8. Delegare de task-uri</a>
+            </li>
+            <li><a href="#bibliography">9. Bibliography & Sources</a>
+        </ul>
+    </div>
+
+ 
+    <section id="abstract" role="doc-abstract">
+      <h2>
+        <span>1. </span>
+        Abstract
+      </h2>
+      <p>
+        O platformă Web care permite gestionarea de urgență a unor situații extreme (e. cutremure, incendii, inundații etc.) de către autorități sau organizații și, totodată, permite administrarea unui sistem pe baza căruia pot fi raportate diverse dispariții ale unor persoane.
+      </p>
+    </section>
+
+    <section id="introduction" role="doc-introduction">
+
+        <h2>
+            <span>2. </span>
+            Introducere
+        </h2>
+        <img src="..report/images/cric.png">
+      <p>
+        Pentru a fi în siguranță și cât mai conștientă de evenimentele care au loc în jurul nostru, populația are nevoie de un sistem integrat de avertizare și alarmare, valabil pe toate dispozitivele, care să permită, în cel mai scurt timp posibil, informarea cu toate detaliile necesare cu privire la fenomenul extrem petrecut sau la victimele date dispărute de către apropiați.
+     </p>
+      <p>
+        Identificând această nevoie, putem soluția necesitatea prin construirea unei aplicații de alertare. <b>Crisis Containment Service</b> se dorește a reprezenta o aplicație Web care permite autorităților sau organizațiilor specializate să gestioneze situații de urgență, precum cutremure, incendii, inundații, dispariții ale persoanelor etc.
+      </p>
+      <p>
+        Aplicația va furniza atât informații de inters în ceea ce privește evenimentele, persoanele sau zonele afectate, cât și metode de prim ajutor sau ce poți face în caz de un dezastru. De asemenea, se vor primi notificări în caz că o persoană este afectată direct sau dacă se află în vecinătate. 
+    </p>
+      <p>
+        Cu toate acestea, sistemul va furniza informații de interes pentru găsirea unei persoane dispărute sau legate de orice adăposturi și căi de salvare.
+    </p>
+      
+    </section>
+
+    <section id="Technologies">
+
+        <h2>
+            <span>3. </span>
+            Tehnologii folosite
+        </h2>
+
+        <h3 id="tech_1">
+          <span>3.1 </span>
+          HTML CSS JavaScript
+      </h3>
+        <p>
+        Focusul principal ce stabilește identitatea aplicației noastre este redat cu ajutorul <b>HTML</b>,<b>CSS</b> și <b>JavaScript</b>. Pe parcursul dezvoltării acesteia, pe partea de Front-end, s-a utilizat HTML pentru crearea scheletului, care ulterior a fost stilizat cu CSS și în care s-au implementat diferite funcționalități cu JavaScript. 
+        </p>
+
+        <h3 id="tech_2">
+          <span>3.2 </span>
+          NodeJS
+      </h3>
+      <p>
+        Partea de back-end a fost implementată cu ajutorul limbajului open-source <b>NodeJS</b>, întrucât acesta este destinat dezvoltării de aplicații Web rapide și scalabile. Platformă ale cărei rădăcini stau în JavaScript, folosește un model bazat pe evenimente în care operațiile de intrare/ieșire sunt gestionate asincron, permițând astfel utilizarea sa în aplicații de timp real(ex.Uber, Microsoft, eBay) și care rulează pe dispozitive distribuite, fără a fi afectată performanța.
+      </p>
+
+      <h3 id="tech_3">
+        <span>3.3 </span>
+        MongoDB
+    </h3>
+    <p>
+      <b>MongoDB</b> este o bază de date NoSQL open-source orientată pe documente. Diferența principală constă în faptul că stocarea datelor nu se face folosind tabele precum într-o bază de date relațională, MongoDB stochează datele sub formă de documente JSON cu scheme dinamice.
+    </p>
+    <h3 id="tech_4">
+      <span>3.4 </span>
+      GitHub
+  </h3>
+        <p>
+        Pentru urcarea surselor, coordonarea și munca în echipă am folosit serviciul <b>GitHub</b>. Acesta permite păstrarea unei copii a proiectului online și vizualizarea tuturor fișierelor și a modificărilor aduse acestora.
+        </p>
+        
+      <h3 id="tech_5">
+        <span>3.5 </span>
+       Server
+      </h3>
+      <p>
+         Luând în considerare că tehnologiile amintite până acum au ca fundament JavaScript, construirea server-ului s-a bazat pe  
+      </p>
+      </section>
+
+    <section id="architecture">
+      
+        <h2>
+            <span>4. </span>
+             Arhitectura proiectului
+        </h2>
+        <h3 id="arhitecture_1">
+            <span>4.1 </span>
+            Diagramă
+        </h3>
+      <p>
+        <img src="./images/diagram.jpg" alt="Diagrama">
+      </p>
+
+        <h3 id="arhitecture_2">
+            <span>4.2 </span>
+            Context
+        </h3>
+        <p>
+                Atunci când utilizatorul accesează aplicația web CriC, acesta va interacționa, în prima fază,
+                cu Map Page-ul, în cadrul căreia este integrată harta dezvoltată de cei de la Google - Google 
+                Crisis Map. În cadrul harții, utilizatorul poate vedea evenimentele petrecute în toata lumea.
+                Dacă acesta dorește să acceseze oricare altă pagină, atunci avem una dintre urmatoarele situații:
+        </p>
+        <ol type="I">
+
+            <li>Utilizatorul nu este logat - acesta va fi redirecționat către pagina de Login.
+                <ol type="a">
+                    <li>
+                            Dacă are deja cont în baza de date, atunci introduce datele (email și parolă). În 
+                            funcție de corectitudinea datelor, acesta poate fi redirecționat către pagina principală (în 
+                            caz pozitiv) sau întors în pagina de Login (în caz negativ).
+                    </li>
+                    <li>
+                            Dacă nu are un cont, atunci va accesa pagina de Sign Up, unde va completa un formular.
+                            Dacă datele introduse nu sunt găsite în baza de date și sunt valide, atunci acesta va fi redirecționat
+                            către pagina principală (în Map Page). În caz contrar, utilizatorul va primi un mesaj și va rămâne în pagina
+                            de Sign Up.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                    Utilizatorul este logat - acesta poate accesa orice pagină din meniul aplicației.
+            
+            <ol type="a">
+                <li>
+                        Dacă utilizatorul alege accesarea paginii Events Page, atunci datele acestuia vor
+                        fi verificate pentru a se decide dacă:   
+                
+                <ul style="list-style-type:disc;">
+                    <li>
+                        contul aparține unui admin - atunci cel din urma menționat poate edita lista
+                        evenimentelor, detaliile acestora și comentariile din rubrica aferentă; 
+                    </li>
+                    <li>
+                        contul nu aparține unui admin - atunci acesta poate vedea informațiile menționate, având totodata posibilitatea de a le filtra, prin bara de search, după numele acestora.
+                    </li>
+                </ul>
+                <li>
+                        Dacă utilizatorul dorește să adauge un eveniment, completează câmpurile formularului.
+                        În momentul trimiterii acestora către baza de date, se verifică daca nu coincide cu o altă tuplă
+                        deja înregistrată. În eventualitatea în care acestea coincid, utilizatorul este redirecționat
+                        către pagina curentă - Add Event. În caz contrar, acesta va fi redirecționat către o pagina ce
+                        afișeaza o bară de loading și un mesaj de succes, ulterior fiind redirecționat înapoi către pagina Add Event.
+                </li>
+                <li>
+                        În eventualitatea în care utilizatorul dorește accesarea paginii Guide, indiferent de natura sa,
+                        poate vizualiza mai multe detalii despre aplicație în secțiunea About și, de asemenea, se poate informa 
+                        cu privire la ultimele dezastre petrecute.
+                </li>
+                <li>
+                     În situația accesării paginii Casualties, utilizatorul poate alege una dintre urmatoarele:
+                        
+                    <ul style="list-style-type:disc;">
+                        <li>Giving information about somebody:
+                            <ol type="1">
+                                <li>
+                                    dacă datele contului conectat coincid cu cele ale unui admin, atunci utilizatorul curent poate edita informațiile din ce au fost introduse (Nume, prenume, poza) sau comentariile;
+                                </li>
+                                <li>
+                                     dacă datele contului curent aparțin unui simplu utilizator, atunci acesta poate adăuga informațiile pe care le deține despre o persoană dispărută sau poate comenta în secțiunea aferentă.
+                                </li>
+                              </ol>
+                                </li>
+                                <li>
+                                  Finding somebody:
+                              <ol type="1">
+                                    <li>
+                                      permite oricarui tip de utilizator, cu ajutorul Google Person Finder, să caute o persoană dispărută, prin intermediul următoarelor date: nume, prenume, condiția de viață, naționalitate, locul și tipul de eveniment în care a fost implicat.
+                                   </li>
+                              </ol>
+                          </li>
+                    </ul>
+                        
+                </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3 id="arhitecture_3">
+          <span>4.3 </span>
+          Diagramă bază de date
+        </h3>
+          <p>
+            <img src="./images/Diagrama_BD.png" alt="Diagrama BD">
+          </p>
+      </section>
+
+        <section id="SurseExterne">
+      
+          <h2>
+              <span>5. </span>
+               Surse date externe
+          </h2>
+
+          <h3 id="SurseExterne_1">
+            <span>5.1</span>
+            Schimbarea datelor utilizatorului
+          </h3>
+          <p>
+              După completarea datelor formularului de setări cont, este efectuat un apel Ajax de tip post către server și asteaptă un răspuns. Dacă răspunsul este “succes” atunci va notifica user-ul că setările s-au actualizat cu succes, în caz de “eroare”, user-ul va fi notificat că a intervenit o eroare și trebuie să completeze din nou cu date valide.
+              Serverul, după primirea unui JSON cu datele din formularul de setări, modifică în tabela Users cu datele primite, dacă operația s-a efectuat cu succes și trimite mesajul “succes” căre client, altfel, în caz de eroare, trimite mesajul “eroare”.
+          </p>
+
+          <h3 id="SurseExterne_2">
+              <span>5.2</span>
+              Logare
+          </h3>
+          <p>
+              După completarea email-ului și parolei din formularul de logare, este efectuat un apel Ajax de tip post către server și asteaptă un răspuns. Dacă răspunsul este “succes” atunci va redirecta user-ul către pagina principală, în caz de “eroare”, user-ul va fi notificat că datele nu îi sunt valide și să introducă alte date valide.
+              Serverul, dupa primirea unui JSON cu datele din formularul de logare, verifică dacă există înregistrarea cu email și parolă respectivă în tabele Users din baza de date. Dacă există, se trimite raspunsul “succes către client” și este generat un token de sesiune ce este introdus în tabela Logged din baza de date asociat user-ului curent.     
+          </p>
+        <p>
+
+            <h3 id="SurseExterne_3">
+                <span>5.3</span>
+                Utilizarea de API-uri
+            </h3>
+            <p>
+                Platforma va implementa și unele servicii de la Google precum Google Crisis Map, Fusion Tables ,Geolocation API și Google Person Finder.
+                Pentru implementarea acestora se va folosi arhitectura de aplicatie RESTful (Representational State Transfer).Fiecare request trimis de către platofrmă la una din API-urile de mai sus o să fie identificat printr-un API key.
+                Aceste servicii web au fost create pentru a afla în mod rapid despre anumite dezastre naturale, numarul de victime și dacă anumite persoane au fost implicate.
+                Pe lângă aceste lucruri, persoanele din zona unui dezastru pot fi anunțate rapid despre evenimente. Google Crisis Map este principalul din cele enumerate mai sus.
+                Acesta, alături de Person Finder au să utilizeze intens Google Maps pentru o mai bună identificare a locației unei anumite persoane spre exemplu.
+            </p>
+
+          <section id="MVC">
+
+                <h2>
+                    <span>6. </span>
+                    Model-View-Controller (MVC)
+                </h2>
+                <img id="mvc-pic" src="./images/mvc.jpg" alt="Diagrama MVC">
+                <p> 
+                  /(root) 
+                </p>
+                <ul style="list-style-type:none;">
+                    <li>
+                        Controllers - putem controla accesul la aplicația noastră, putând diversifica conținutul de o formă dinamică și statică, în același timp.
+                        <ul style="list-style-type:disc;">
+                          <li>
+                              MainController.js
+                          </li>
+                          <li>
+                              PostsController.js
+                          </li>
+                          <li>
+                              EditController.js
+                          </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Models - responsabile de manipularea operațiunilor logice și de utilizare de informație pentru a rezulta de o formă ușor de înțeles.
+                        <ul style="list-style-type:disc;">
+                          <li>
+                              UsersModel.js
+                          </li>
+                          <li>
+                              PostsModel.js
+                          </li>
+                          <li>
+                              EditModel.js
+                          </li>
+                          <li>
+                              FindingModel.js
+                          </li>
+                          <li>
+                              NotificationsModel.js
+                          </li>
+                        </ul>
+                    </li>
+                    <li>
+                        View - corespunde reprezentării grafice, sau mai bine zis, exprimării ultimei forme a datelor: interfața grafică ce interacționează cu utilizatorul final.
+                        <ul style="list-style-type:disc;">
+                          <li>
+                              home.html
+                          </li>
+                          <li>
+                              Casualities.html
+                          </li>
+                          <li>
+                              search.html
+                          </li>
+                          <li>
+                              about.html
+                          </li>
+                          <li>
+                              contact.html
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>   
+                
+                
+              </section>
+
+              <section id="UseCases">
+
+                  <h2>
+                      <span>7. </span>
+                      Use Cases
+                  </h2>
+                  
+                    <h3>
+                      <span>7.1 </span>
+                      User person
+                    </h3>
+
+                      <ul style="list-style-type:disc;">
+                        <li>
+                            utilizatori: este reprezentat de orice utilizator normal
+                        </li>
+                        <li>
+                            administrator : este reprezentat de autorități
+                        </li>
+                      </ul>
+                    <h3>
+                      <span>7.2 </span>
+                      User stories
+                    </h3>
+
+                    <ol type="I">
+                        <li>
+                            utilizator:
+                            <ul style="list-style-type:disc;">
+                              <li>
+                                  se poate loga pe aplicație (în cazul în care nu are cont, se poate înregistra și după loga)
+                              </li>
+                              <li>
+                                  după ce se loghează, poate accesa Events Page, Add Event Page sau Casualities Page
+                              </li>
+                              <li>
+                                  în cazul în care accesează Events Page unde poate vizualiza lista evenimentelor (Events List) cu toate detaliile despre acestea, poate adăuga comentarii la evenimente sau poate căuta evenimente cu Search events.
+                              </li>
+                              <li>
+                                  în cazul în care accesează Add Event Page, acesta completează un formular în care poate adăuga un eveniment care are loc sau s-a petrecut la locația la care acesta se află sau în apropierea sa (în cazul în care trimiterea formularului a eșuat, este afișată o eroare).
+                              </li>
+                              <li>
+                                  în cazul în care accesează Casualities Page acesta poate completa un mic formular prin care oferă informații despre o persoană dată dispărută (Finding somebody) sau poate da dispărută o persoană oferind informații despre aceasta (nume, prenume, descriere despre locul unde a fost văzută ultima dată și o fotografie cu aceasta atașată).
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                            administrator:
+                            <ul style="list-style-type:disc;">
+                            <li>
+                                are acces la toate acțiunile pe care le are și un utilizator normal
+                            </li>
+                            <li>
+                                în plus - când accesează Events Page acesta are acces la editarea evenimentelor postate de alți utilizatori (detalii, comentarii)
+                            </li>
+                            <li>
+                                în plus - când accesează Casualities Page acesta are acces la editarea informațiilor despre persoanele date dispărute (nume, prenume,
+                                imagine și detalii despre când și unde a fost văzută ultima dată).
+               
+                            </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <ol type="1">
+                      <li>
+                        Scenariu:
+                        <ul style="list-style-type:disc;">
+                          <li>
+                              un utilizator dorește să adauge un eveniment
+                          </li>
+                        </ul>
+                        Descriere:
+                        <ul style="list-style-type:disc;">
+                          <li>
+                              un utilizator accesează aplicația, este redirecționat către Map Page, apasă pe butonul de Add Event, în cazul în care nu este logat, este trimis către pagina de login,
+                              unde se poate loga sau își poate creea un cont apăsând pe butonul Register, astfel fiind redirecționat către alt formular pentru a își creea un cont
+                          </li>
+                          <li>
+                              după crearea contului este redirecționat către pagina de logare. Fiind logat, este trimis pe pagina principală (Map Page) unde ca să adauge evenimentul, accesează formularul de adăugare din Add Event, pe care îl completează. 
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li>
+                          Scenariu:
+                          <ul style="list-style-type:disc;">
+                            <li>
+                                un admin logat dorește să modifice datele despre un eveniment adăugat
+                            </li>
+                          </ul>
+                          Descriere:
+                          <ul style="list-style-type:disc;">
+                            <li>
+                                un admin logat accesează pagina Events List pentru a putea edita un eveniment adăugat recent. Apasă pe butonul edit din dreptul unui eveniment unde modifică datele introduse  de către utilizator
+                            </li>
+                            <li>
+                                datele sunt reactualizate atât pe pagină cât și în baza de date. Adminul după este redirecționat din nou pe pagina Events List. 
+                            </li>
+                          </ul>
+                        </li>
+                    </ol>
+                  
+                  
+                </section>
+
+                <section id="Tasks">
+
+                    <h2>
+                        <span>8. </span>
+                        Delegare de task-uri
+                    </h2>
+
+                    <ul style="list-style-type:none;">
+                    <li>
+                      Tizu Bianca
+                      <ul style="list-style-type:disc;">
+                          <li>
+                              <s>Pin-uri pe hartă și corelare cu Event List</s>
+                              <li>
+                              Gestionarea persoanelor din Person Finder - operații de tip CRUD;
+                            </li>
+                            <li>
+                              Integrarea aplicației cu Geolocation API astfel încât locația să fie preluată cu ajutorul GPD-ului dispozitivului;
+                            </li>
+                          <li>
+                            Integrarea aplicației cu Google Crisis Map astfel încât, atunci când o persoană nouă este introdusă în baza de date, aceasta să fie marcată cu ajutorul unui PIN pe hartă.
+                          </li>
+                          </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <s>Mihăilă Bogdan</s>
+                        <ul style="list-style-type:disc;">
+                        <li>
+                            <s>Creare bază de date Person Finder</s>
+                        </li>
+                      </ul>
+                      </li>
+                      <li>
+                        <s>Mîndrișoru Tudor</s>
+                          <ul style="list-style-type:disc;">
+                              <li>
+                                <s>Adăugare pin pe hartă din formular</s>
+                              </li>
+                              <li>
+                                <s>Corelare cu Event List a formularului</s>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                          <s> Raicu Andrei-Eduard</s>
+                            <ul style="list-style-type:disc;">
+                                <li>
+                                  <s>  Sistem de notificare cu privire la incidente</s>
+                                </li>
+                              </ul>
+                          </li>                    
+                    </ul>  
+                  </section>
+                  
+                  <section id="bibliography">
+                    <h2> 9. Resurse</h2>
+                    <ul style="list-style-type:none;">
+                      <li>
+                       Bibliografie
+                        <ul style="list-style-type:disc;">
+                            <li>
+                              <a href="https://support.google.com/crisismaps/?hl=en">Google Crisis Map</a>
+                            </li>
+                            <li>
+                              <a href="https://ro.wikipedia.org/wiki/MongoDB">MongoDB</a>
+                            </li>
+                            <li>
+                              <a href="http://aipi2015.andreirosucojocaru.ro/laboratoare/laborator06">NodeJS</a>
+                            </li>
+                            <li>
+                              <a href="https://profs.info.uaic.ro/~andrei.panu/webprojects.html">Descrierea aplicației</a>
+                            </li>
+                          </ul>
+                      </li>
+
+                      <li>
+                        Sursă imagini
+                         <ul style="list-style-type:disc;">
+                             <li><a href="https://helloacm.com/wp-content/uploads/2017/01/model-view-controller-mvc-explained.jpg" target="_blank" > MVC Model </a>
+                             </li>
+                           </ul>
+                       </li>
+                      </ul>
+                    </section>
+    </section>
+
+  </body>
+</html>

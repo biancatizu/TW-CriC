@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function initMap(persons) {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 47.151726,
+                    lng: 27.587914
+                },
+                zoom: 12
+            });
+            let markers = [];
+            persons.forEach((person) => {
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<h4>First name:</h4> ${person.firstname}
+                    <h4>Last name:</h4> ${person.lastname}
+                    <h4>Situation:</h4> ${person.situation}
+                    <h4>Description:</h4> ${person.description}`
+                });
+                const marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(person.latitude, person.longitude),
+                    title: person.firstname + ' ' + person.lastname
+                });
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                })
+                markers.push(marker);
+            });
+            const markerCluster = new MarkerClusterer(map, markers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+            });
+        }
+
+        function getPersons() {
+            const request = new XMLHttpRequest();
+            request.open('GET', 'http://localhost:4201/persons/getAll', true);
+            request.onload = function () {
+                initMap(JSON.parse(request.response));
+            }
+            request.send();
+        }
+    </script>
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASAv8eA2ZiEiPmWrKWfXJAhbdZFCATRH0&callback=getPersons"
+        async defer></script>
+</body>
+
+</html>
